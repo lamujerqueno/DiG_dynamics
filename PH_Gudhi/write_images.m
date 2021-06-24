@@ -55,7 +55,7 @@ affI = max(I);
 
 % writing the file with parameters: first frame, increment, last frame,
 % height, width, normalisation constant
-data = [startframe,increment,nframes,newheight,newwidth,affI];
+data = [startframe;increment;nframes;newheight;newwidth;affI];
 csvwrite('parameters.csv',data);
 
 cd ../../Code
