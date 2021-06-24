@@ -37,7 +37,7 @@ if __name__=='__main__':
     sei = {}
     for folder in folders:
         chdir(folder)
-        param = loadtxt('param2.csv')
+        param = loadtxt('parameters.csv')
         start,inc,end = map(int,param[:3]) # inc = increment in frame number
         sei[folder] = [start,end+1,inc]
         chdir('..')
