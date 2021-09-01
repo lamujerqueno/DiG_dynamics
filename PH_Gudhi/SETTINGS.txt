@@ -1,0 +1,20 @@
+INPUTSOURCE     1                       # The source for the input: 0 = VIDEO, 1 = IMAGES.
+                                        # Default: 0
+#VIDEO           M_Vid11.mp4          # The video file (inside TOPFOLDER, see below) to be analysed.
+IMAGES          boxed                 # The images (inside TOPFOLDER, see below) to be analysed.
+TOPFOLDER      ../../Desktop/code_12112020/Ivan_M     # The folder containing the video files and all the analysis.
+                                        # Default: ../Experiments
+FOLDER         analysis             # The folder for the analysis of this particular video
+                                        # (to be created inside the TOPFOLDER).
+                                        # Default: the VIDEO parameter above (without the extension)
+#METHOD         0                       # Method to convert RGB images to 1-dimensional data.
+                                        # 0 = greyscale, 1 = red, 2 = green, 3 = blue.
+                                        # Default: 0
+#NORMALISED     0                       # Normalise pixel intensities? 0 = false, 1 = true.
+                                        # Default: 1
+#INVERTED       0                       # Invert pixel intensities? 0 = false, 1 = true.
+                                        # Default: 0
+#EXTRAFOLDER    analysis2               # Additional folder for bottleneck/Wasserstein distance calculation.
+                                        # Can be given any number of times, once for each additional folder!
+                                        # Default: none
+#EXTRAFOLDER    analysis3
