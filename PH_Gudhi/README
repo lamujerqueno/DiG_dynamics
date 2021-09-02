@@ -1,4 +1,5 @@
 Code to compute cubical persistent homology (via Gudhi) and other topological descriptors 
+This code requires Python 3 and GUDHI
 
 ***********************************************************************************************************
 SETTINGS.txt is the only file that needs to be modified whenever any of the following computations is run. 
@@ -55,7 +56,7 @@ SETTINGS.txt is the only file that needs to be modified whenever any of the foll
     Input: write_images.py or crop_images.py output data 
     Output: a single csv file containing the gradient distance matrix and a README file.
    
-12. crop_images
+12. crop_images.py
     Input: write_images.py output data
     Output: a folder containing the cropped images
 
