@@ -1,5 +1,5 @@
 Code to compute cubical persistent homology (via Gudhi) and other topological descriptors 
-This code requires Python 3 and GUDHI
+This code must be run in Unix OS computers and requires Python 3 and GUDHI. 
 
 ***********************************************************************************************************
 SETTINGS.txt is the only file that needs to be modified whenever any of the following computations is run. 
