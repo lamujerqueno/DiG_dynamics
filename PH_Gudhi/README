@@ -1,5 +1,8 @@
 Code to compute cubical persistent homology (via Gudhi) and other topological descriptors 
-This code must be run in Unix OS computers and requires Python 3 and GUDHI. 
+This code requires python 3 and the following python packages:
+1) GUDHI
+2) OpenCV
+3) Pillow
 
 ***********************************************************************************************************
 SETTINGS.txt is the only file that needs to be modified whenever any of the following computations is run. 
@@ -13,7 +16,7 @@ SETTINGS.txt is the only file that needs to be modified whenever any of the foll
 2. write_perseus.py
     Produces perseus-formatted files from processed frames.
 	Input: write_images.m output files
-	Output: perseus-formatted files (*.txt)
+	Output: perseus-formatted files (*.csv)
    
 3. write_persistence.py
    It computes persistence diagrams.
@@ -36,7 +39,7 @@ SETTINGS.txt is the only file that needs to be modified whenever any of the foll
    Input: write_persistence.py output data
    Output: a single csv file (for each dimension computed in persistece) containing the p-norm of each peristence diagram and  a README file.
    
-7. distance_persistence.py
+7. dist_persistence.py
    Compute the p-norm of each persistence diagram.
    Input: write_persistence.py output data.
    Output: a single csv file (for each dimension computed in persistence) containing the Warssestein distance matrix  and a README file.
@@ -49,10 +52,10 @@ SETTINGS.txt is the only file that needs to be modified whenever any of the foll
    Input: write_images.py or crop_images.py output data
    Output: a single csv file with the L^2 norm of the gradient of the image and a README file.
 
-10. distance_picture.py
+10. dist_pictures.py
     Input: write_images.py or crop_images.py output data
    
-11. distance_gradient.py
+11. dist_gradient.py
     Input: write_images.py or crop_images.py output data 
     Output: a single csv file containing the gradient distance matrix and a README file.
    

@@ -4,6 +4,7 @@ from numpy import array,loadtxt,savetxt
 from os import mkdir
 from PIL import Image,ImageOps
 from sys import argv
+from warnings import warn
 
 def combineDialogue():
     prompt = 'Placement of the video frame relative to persistence diagram (default=left)? [l/r/t/b]: '
@@ -101,7 +102,7 @@ def writeVideo(suffix, numframes, imgdim, framerate):
     for i in range(numframes):
         img = imread('combined%s/frame%.5d.png' % (suffix,i))
         out.write(img)
-        img.close()
+        # img.close()
         progressBar(i+1,numframes)
     out.release()
 

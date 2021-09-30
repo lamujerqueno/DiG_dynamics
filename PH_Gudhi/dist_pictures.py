@@ -3,7 +3,7 @@ from norm_pictures import normPicsDialogue
 from numpy import array,linalg,savetxt,zeros
 from PIL import Image,ImageChops
 from sys import argv
-#from write_perseus import reCrop
+from crop_images import reCrop
 
 def distPicsDialogue(numframes, left, right, top, bottom, filename):
     startval = input('The first frame to consider (default=0): ').strip()
@@ -69,7 +69,7 @@ if __name__=='__main__':
     rgb, p = normPicsDialogue('distance')
     suffix2 = ('rgb' if rgb else '')
     filename = 'dist%d_frames%s' % (p,suffix2)
-    #numframes, left, right, top, bottom, normconst = reCrop(param)
+    numframes, left, right, top, bottom = reCrop(param)
     left, right, top, bottom = map(int,param[1:5])
     start, end, inc = distPicsDialogue(numframes, left, right, top, bottom, filename)
     if normalised:

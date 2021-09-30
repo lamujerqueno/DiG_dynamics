@@ -138,7 +138,7 @@ def firstThingsToDo(filename):
     depmet,previous = checkDependencies(filename, inputsource, video, images, topfolder, folder, method, normalised, inverted)
     if not depmet:
         print('Dependencies for %s not met: running %s first...' % (filename,previous))
-        prev = system('python3 '+previous)
+        prev = system('python '+previous)
         if prev:
             raise RuntimeError('process terminated by user.')
     chdir(topfolder+'/'+folder)

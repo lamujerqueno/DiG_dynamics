@@ -2,7 +2,7 @@ from checks import firstThingsToDo,progressBar
 from numpy import array,linalg,savetxt,zeros
 from PIL import Image
 from sys import argv
-#from write_perseus import reCrop
+from crop_images import reCrop
 
 def normPicsDialogue(nd):
     rgbval = input('Compute the %s of RGB pictures (default=0, enter 0 for greyscale and 1 for RGB)? '%nd).strip()
@@ -49,7 +49,7 @@ def normPics(numframes, rgb, p, left, right, top, bottom, normconst):
 if __name__=='__main__':
     method, normalised, inverted, param = firstThingsToDo(argv[0])
     rgb, p = normPicsDialogue('norm')
-    #numframes, left, right, top, bottom, normconst = reCrop(param)
+    numframes, left, right, top, bottom = reCrop(param)
     left, right, top, bottom = map(int,param[1:5])
     if normalised:
         newnormconst = param[6]
