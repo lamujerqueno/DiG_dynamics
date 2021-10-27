@@ -1,4 +1,5 @@
-Code to compute cubical persistent homology (via Gudhi) and other topological descriptors 
+Created by Ingrid Membrillo Solis
+This code to compute cubical persistent homology (via Gudhi) and other topological descriptors 
 This code must be run in Unix OS computers and requires Python 3 and GUDHI. 
 
 ***********************************************************************************************************
